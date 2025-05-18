@@ -197,13 +197,13 @@ footer {
 .contact-form button:hover {
   background-color: #1565c0;
 }
-.categorias {
+.categoria {
   padding: 40px 20px;
   background-color: #f4f4f4;
   text-align: center;
 }
 
-.categorias h2 {
+.categoria h2 {
   font-size: 2rem;
   margin-bottom: 30px;
 }
