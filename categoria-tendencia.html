@@ -2,14 +2,139 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tendencia - Vicmar Dropshipping</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Diseño global */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #005f8d;
+      color: white;
+      padding: 15px 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav-button {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background-color: #003f63;
+      border-radius: 5px;
+    }
+
+    main {
+      padding: 40px 10px;
+    }
+
+    .categoria h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #005f8d;
+      margin-bottom: 30px;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .producto-card {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+
+    .producto-card img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .producto-card h2 {
+      font-size: 1.2em;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .producto-card p {
+      color: #555;
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .producto-card button {
+      background-color: #005f8d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .producto-card button:hover {
+      background-color: #003f63;
+    }
+
+    .producto-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .categoria h1 {
+        font-size: 2em;
+      }
+
+      .nav-button {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="main-header">
-    <nav class="navbar" role="navigation" aria-label="Menú principal">
+  <header>
+    <nav class="navbar">
       <a href="index.html" class="nav-button">Inicio</a>
       <a href="productos.html" class="nav-button">Productos</a>
       <a href="contacto.html" class="nav-button">Contacto</a>
@@ -17,88 +142,89 @@
   </header>
 
   <main>
-    <section class="categoria tendencia">
-      <h1 class="section-title">Tendencia</h1>
+    <section class="categoria">
+      <h1>Tendencia</h1>
       <div class="productos-grid">
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Láser de Luz Verde, precio 6 dólares">
-          <img src="img/productos/LASER DE LUZ VERDE.jpg" alt="Láser de luz verde" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/LASER DE LUZ VERDE.jpg" alt="Láser de luz verde" />
           <h2>Láser de Luz Verde</h2>
-          <p class="precio">$6.00</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Láser de Luz Verde">Comprar</button>
-        </article>
+          <p>$6.00</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Intercomunicador para casco de moto, precio 21.99 dólares">
-          <img src="img/productos/INTERCOMUNICADOR PARA CASCO DE MOTO.jpg" alt="Intercomunicador para casco" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/INTERCOMUNICADOR PARA CASCO DE MOTO.jpg" alt="Intercomunicador para casco de moto" />
           <h2>Intercomunicador para Casco de Moto</h2>
-          <p class="precio">$21.99</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Intercomunicador para Casco de Moto">Comprar</button>
-        </article>
+          <p>$21.99</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Estufa Portable a Gas 1 Quemador, precio 18 dólares">
-          <img src="img/productos/ESTUFA PORTABLE A GAS 1 QUEMADOR.jpg" alt="Estufa a gas portátil" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/ESTUFA PORTABLE A GAS 1 QUEMADOR.jpg" alt="Estufa portable a gas 1 quemador" />
           <h2>Estufa Portable a Gas (1 Quemador)</h2>
-          <p class="precio">$18.00</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Estufa Portable a Gas">Comprar</button>
-        </article>
+          <p>$18.00</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Vaper VKUP A7, precio 6 dólares">
-          <img src="img/productos/VAPER VKUP A7.jpg" alt="Vaper VKUP A7" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/VAPER VKUP A7.jpg" alt="Vaper VKUP A7" />
           <h2>Vaper VKUP A7</h2>
-          <p class="precio">$6.00</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Vaper VKUP A7">Comprar</button>
-        </article>
+          <p>$6.00</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Vaper VKUP A3, precio 11.99 dólares">
-          <img src="img/productos/VAPER VKUP A3.jpg" alt="Vaper VKUP A3" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/VAPER VKUP A3.jpg" alt="Vaper VKUP A3" />
           <h2>Vaper VKUP A3</h2>
-          <p class="precio">$11.99</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Vaper VKUP A3">Comprar</button>
-        </article>
+          <p>$11.99</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Vaper SONG Y193C, precio 11.99 dólares">
-          <img src="img/productos/VAPER SONG Y193C.jpg" alt="Vaper SONG Y193C" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/VAPER SONG Y193C.jpg" alt="Vaper SONG Y193C" />
           <h2>Vaper SONG Y193C</h2>
-          <p class="precio">$11.99</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Vaper SONG Y193C">Comprar</button>
-        </article>
+          <p>$11.99</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Vaper SONG D60, precio 11.99 dólares">
-          <img src="img/productos/VAPER SONG D60.jpg" alt="Vaper SONG D60" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/VAPER SONG D60.jpg" alt="Vaper SONG D60" />
           <h2>Vaper SONG D60</h2>
-          <p class="precio">$11.99</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Vaper SONG D60">Comprar</button>
-        </article>
+          <p>$11.99</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Watch TV Android 14.0 Hey Google SN-1115, precio 24.99 dólares">
-          <img src="img/productos/WATCH TV ANDORID 14.0 HEY GOOGLE SN- 1115.jpg" alt="Smartwatch Android 14" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/WATCH TV ANDORID 14.0 HEY GOOGLE SN- 1115.jpg" alt="Watch TV Android 14.0 Hey Google SN-1115" />
           <h2>Watch TV Android 14.0 Hey Google SN-1115</h2>
-          <p class="precio">$24.99</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Watch TV Android 14.0">Comprar</button>
-        </article>
+          <p>$24.99</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Set Top Box MX10PRO 10K SN-1016, precio 26 dólares">
-          <img src="img/productos/SET TOP BOX MX10PRO 10K SN-1016.jpg" alt="Set Top Box" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/SET TOP BOX MX10PRO 10K SN-1016.jpg" alt="Set Top Box MX10PRO 10K SN-1016" />
           <h2>Set Top Box MX10PRO 10K SN-1016</h2>
-          <p class="precio">$26.00</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Set Top Box MX10PRO">Comprar</button>
-        </article>
+          <p>$26.00</p>
+          <button>Comprar</button>
+        </div>
 
-        <article class="producto-card" tabindex="0" aria-label="Producto Hidrolavadora portátil, precio 40 dólares">
-          <img src="img/productos/Hidrolavadora portatil.jpg" alt="Hidrolavadora portátil" loading="lazy" />
+        <div class="producto-card">
+          <img src="img/productos/Hidrolavadora portatil.jpg" alt="Hidrolavadora portátil" />
           <h2>Hidrolavadora Portátil</h2>
-          <p class="precio">$40.00</p>
-          <button class="btn-comprar" type="button" aria-label="Comprar Hidrolavadora Portátil">Comprar</button>
-        </article>
+          <p>$40.00</p>
+          <button>Comprar</button>
+        </div>
 
       </div>
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer>
     <p>&copy; 2025 Vicmar Dropshipping. Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
+
 
