@@ -9,45 +9,48 @@
 </head>
 <body>
 
-  <header class="main-header">
+  <header class="main-header" role="banner">
     <div class="logo-container">
-      <img src="img/icon_m.png" alt="Vicmar Business Logo">
+      <img src="img/icon_m.png" alt="Logo de Vicmar Business" width="40" height="40" />
       <span class="logo-text">Vicmar Business</span>
     </div>
-    <nav class="navbar">
-      <a href="index.html" class="nav-button">Inicio</a>
+
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <a href="index.html" class="nav-button" aria-current="page">Inicio</a>
       <a href="productos.html" class="nav-button">Productos</a>
       <a href="contacto.html" class="nav-button">Contacto</a>
     </nav>
   </header>
 
-  <main>
-    <section class="product-section">
-      <h1>Productos</h1>
+  <main role="main">
+    <section class="product-section" aria-labelledby="productos-titulo">
+      <h1 id="productos-titulo">Productos</h1>
       <p>Descubre nuestra selección de productos de calidad.</p>
 
-      <div class="category-links">
+      <nav class="category-links" aria-label="Categorías de productos">
         <a href="categoria-belleza.html" class="btn-category">Belleza</a>
         <a href="categoria-hogar.html" class="btn-category">Hogar</a>
         <a href="categoria-tecnologia.html" class="btn-category">Tecnología</a>
         <a href="categoria-tendencia.html" class="btn-category">Tendencia</a>
-      </div>
+      </nav>
 
-      <div class="product-list">
-        <article class="product-card">
-          <img src="img/productos/producto1.jpg" alt="Producto 1">
-          <h3>Producto 1</h3>
-          <p>Descripción del producto 1.</p>
-          <a href="producto1.html" class="btn-secondary">Ver detalles</a>
+      <div class="product-list" aria-label="Lista de productos destacados">
+        <article class="product-card" tabindex="0">
+          <img src="img/productos/producto1.jpg" alt="Imagen del Producto 1" />
+          <h2>Producto 1</h2>
+          <p>Descripción breve y clara del producto 1.</p>
+          <a href="producto1.html" class="btn-secondary" role="button">Ver detalles</a>
         </article>
-        <!-- Puedes añadir más productos aquí -->
+        <!-- Añade más productos aquí -->
       </div>
     </section>
   </main>
 
-  <footer>
-    <img src="img/icon_m.png" alt="Vicmar Business Icono" style="height: 30px;">
-    <p>© 2025 Vicmar Business. Todos los derechos reservados.</p>
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <img src="img/icon_m.png" alt="Ícono Vicmar Business" height="30" />
+      <p>© 2025 Vicmar Business. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
 </body>
