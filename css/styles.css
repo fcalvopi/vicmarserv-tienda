@@ -24,9 +24,13 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
+  background: linear-gradient(to bottom right, #00416A, #E4E5E6); /* fondo de vicmar-home */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--color-text);
 }
+
 
 /* ========================
    HEADER
