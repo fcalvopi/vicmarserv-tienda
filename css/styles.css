@@ -1,317 +1,157 @@
-/* ========================
-   VARIABLES GLOBALES
-======================== */
-:root {
-  --color-bg: #f5f5f5;
-  --color-text: #333;
-  --color-muted: #555;
-
-  --color-primary: #0073e6;
-  --color-primary-dark: #005bb5;
-  --color-accent: #005f8d;
-
-  --color-btn-secondary: #004080;
-  --color-btn-secondary-hover: #0066cc;
-
-  --color-footer-bg: #333;
-  --color-white: #fff;
-}
-
-/* ========================
-   DISEÑO GLOBAL
-======================== */
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #00416A, #E4E5E6); /* fondo de vicmar-home */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: var(--color-text);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-
-/* ========================
-   HEADER
-======================== */
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-white);
-  padding: 10px 20px;
-  color: var(--color-white);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem 0;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo-container img {
-  height: 40px;
-}
-
-.logo-text {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-/* ========================
-   NAVBAR
-======================== */
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.logo {
-  height: 40px;
-  width: auto;
-}
-
-/* ========================
-   BOTONES - BASE
-======================== */
-.btn {
-  font-weight: 700;
-  font-size: 1.05rem;
-  border-radius: 40px;
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
-  text-align: center;
-  transition:
-    background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.15s ease;
-}
-
-.btn:hover,
-.btn:focus-visible {
-  outline: none;
-  transform: translateY(-3px);
-}
-
-.btn:active {
-  transform: translateY(1px);
-}
-
-/* Botón navbar */
-.nav-button {
-  @extend .btn;
-  background-color: transparent;
-  color: var(--color-white);
-  padding: 12px 25px;
-  box-shadow: 0 4px 12px rgba(0, 115, 230, 0.35);
-}
-
-.nav-button:hover,
-.nav-button:focus-visible {
-  background-color: #003f63;
-  box-shadow: 0 8px 20px rgba(0, 63, 99, 0.55);
-}
-
-/* Botón categoría */
-.btn-category {
-  @extend .btn;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 14px 32px;
-  box-shadow: 0 4px 12px rgba(0, 115, 230, 0.35);
-}
-
-.btn-category:hover,
-.btn-category:focus-visible {
-  background-color: var(--color-primary-dark);
-  box-shadow: 0 8px 20px rgba(0, 91, 181, 0.55);
-}
-
-/* Botón detalles */
-.btn-secondary {
-  @extend .btn;
-  background-color: var(--color-btn-secondary);
-  color: var(--color-white);
-  padding: 14px 32px;
-  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.35);
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus-visible {
-  background-color: var(--color-btn-secondary-hover);
-  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.55);
-}
-
-/* ========================
-   MAIN
-======================== */
-main {
-  padding: 40px 15px;
-}
-
-.product-section h1 {
-  font-size: 2.5rem;
-  color: var(--color-accent);
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.product-section p {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: var(--color-muted);
-}
-
-/* ========================
-   CATEGORÍAS
-======================== */
-.category-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
-}
-
-/* ========================
-   PRODUCTOS
-======================== */
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+.container {
   max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product-card {
-  background-color: var(--color-white);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  margin: auto;
+  padding: 0 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+.logo-text img {
+  height: 50px;
 }
 
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.logo-text span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
-.product-card h3 {
-  font-size: 1.3rem;
-  color: var(--color-accent);
-  margin-bottom: 8px;
+
+.logo img {
+  height: 50px;
+}
+
+nav a.btn {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a.btn:hover {
+  color: #ffd700;
+}
+
+.hero {
   text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #e6f0ff, #ffffff);
 }
 
-.product-card p {
-  font-size: 1rem;
-  color: var(--color-muted);
-  margin-bottom: 20px;
-  text-align: center;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: slideDown 0.7s ease-out;
 }
 
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background-color: var(--color-footer-bg);
-  color: var(--color-white);
-  padding: 20px 0;
-  text-align: center;
-  font-size: 0.9rem;
+.slogan {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.actions {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #004080;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
-footer img {
-  height: 30px;
+.btn:hover {
+  background-color: #0066cc;
+  transform: translateY(-2px);
 }
 
-/* ========================
-   RESPONSIVE
-======================== */
+.icon-btn svg {
+  stroke: white;
+}
+
+/* Animación de entrada */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .navbar {
-    gap: 10px;
+  .container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .nav-button {
-    padding: 10px 15px;
-    font-size: 0.95rem;
+  nav {
+    margin-top: 1rem;
   }
 
-  main {
-    padding: 30px 15px;
-  }
-
-  .product-section h1 {
+  .hero h1 {
     font-size: 2rem;
   }
 
-  .btn-category,
-  .btn-secondary {
-    padding: 12px 28px;
+  .slogan {
     font-size: 1rem;
   }
 
-  .product-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+  .actions {
+    flex-direction: column;
+    gap: 0.75rem;
   }
 }
-
-@media (max-width: 480px) {
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .logo-text {
-    font-size: 1.2rem;
-  }
-
-  .product-list {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-category,
-  .btn-secondary {
-    padding: 12px 24px;
-    font-size: 0.95rem;
-  }
-}
-
 
